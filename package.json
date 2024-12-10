@@ -1,0 +1,52 @@
+{
+  "icon": "media/icon.jpg",
+  "name": "dump-and-die",
+  "displayName": "Wrap DD – Easy Debugging with One Click",
+  "description": "Wrap DD is a productivity-enhancing extension for Visual Studio Code that allows you to quickly wrap selected variables, expressions, or function calls inside the dd() function. Whether you're debugging or inspecting values, Wrap DD helps you streamline your workflow by automatically generating the dd() statements for you!",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Debuggers"
+  ],
+  "activationEvents": [
+    "onCommand:extension.wrapDd"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+		{
+            "command": "extension.wrapDd",
+            "title": "Wrap in dd()",
+            "category": "Laravel"
+        }
+    ],
+	"keybindings": [
+        {
+            "command": "extension.wrapDd",
+            "key": "ctrl+0",
+            "when": "editorTextFocus"
+        }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "eslint": "^9.16.0",
+    "typescript": "^5.7.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}

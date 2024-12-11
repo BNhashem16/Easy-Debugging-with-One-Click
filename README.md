@@ -1,4 +1,6 @@
 # Wrap DD – Easy Debugging with One Click
+![GIF description](https://raw.githubusercontent.com/BNhashem16/Easy-Debugging-with-One-Click/master/media/example.gif)
+
 ![Extension Icon](https://raw.githubusercontent.com/BNhashem16/Easy-Debugging-with-One-Click/master/media/icon.jpg)
 
 Wrap DD is a productivity-enhancing extension for Visual Studio Code that lets you quickly wrap selected variables, expressions, or function calls inside the `dd()` function for debugging.
